@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class DoctorController {
     private final DoctorService doctorService;
 
-    @PostMapping("/save")
+    @PostMapping("/register")
     public Doctor save(@RequestBody DoctorDTO dto){
         return doctorService.saveDoctorDTO(dto);
     }

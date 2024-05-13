@@ -13,5 +13,6 @@ public class CardDto {
     Double balance;
     String cardNumber;
     Long patientId;
+    Boolean active;
     Long doctorId;
 }

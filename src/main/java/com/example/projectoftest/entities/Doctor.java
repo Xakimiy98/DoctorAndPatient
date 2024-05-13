@@ -20,7 +20,6 @@ public class Doctor {
     String lastName;
     String userName;
     String password;
-    Double balance;
     @OneToMany(mappedBy = "doctor")
     List<Resume> resumes;
     @OneToMany(mappedBy = "doctor")

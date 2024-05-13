@@ -16,6 +16,7 @@ public class ResumeService {
 
     public Resume saveResumeDTO(ResumeDTO resumeDTO){
         Resume resume = mapToEntity(resumeDTO);
+        doctorRepository.getReferenceById(resumeDTO.getDoctor()).getResumes().add(resume);
         return resumeRepository.save(resume);
     }
 
@@ -44,8 +45,6 @@ public class ResumeService {
                 .experienceYear(dto.getExperienceYear())
                 .age(dto.getAge())
                 .doctorImage(dto.getDoctorImage())
-                .doctor(doctorRepository
-                        .findById(dto.getDoctor()).orElse(new Doctor()))
                 .build();
                 
     }

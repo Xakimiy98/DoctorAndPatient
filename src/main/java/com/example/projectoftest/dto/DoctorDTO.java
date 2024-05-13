@@ -16,8 +16,6 @@ public class DoctorDTO {
     String lastName;
     String userName;
     String password;
-    Integer age;
-    String address;
     List<Long> resumes;
     List<Long> cards;
 }

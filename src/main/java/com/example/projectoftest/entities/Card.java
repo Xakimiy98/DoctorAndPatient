@@ -18,6 +18,7 @@ public class Card {
     Long id;
     String cardNumber;
     Double balance;
+    Boolean active;
     @ManyToOne
     Patient patient;
     @ManyToOne
